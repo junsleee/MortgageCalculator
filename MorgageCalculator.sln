@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MortgageCalculator", "Mortg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MortgageCalculatorTests1", "MortgageCalculatorTests1\MortgageCalculatorTests1.csproj", "{845B761F-6339-42FE-8DD8-2C73BD839F96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageCalculatorConsole", "MortgageCalculatorConsole\MortgageCalculatorConsole.csproj", "{F5871847-2DEC-4DFD-A878-DF9DAA1FFA9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{845B761F-6339-42FE-8DD8-2C73BD839F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845B761F-6339-42FE-8DD8-2C73BD839F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845B761F-6339-42FE-8DD8-2C73BD839F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5871847-2DEC-4DFD-A878-DF9DAA1FFA9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5871847-2DEC-4DFD-A878-DF9DAA1FFA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5871847-2DEC-4DFD-A878-DF9DAA1FFA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5871847-2DEC-4DFD-A878-DF9DAA1FFA9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
