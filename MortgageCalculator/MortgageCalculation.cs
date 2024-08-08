@@ -14,9 +14,10 @@
         public int Term { get; set; }
         public double InterestRate { get; set; }
         public double Loan { get; set; }
-        public double TotalMonthlyPayment { get { return CalculateMonthlyPayments(loan, interestRate, term); } }
-        public double TotalInterest { get { return CalculateTotalInterest(); } }
-        public double TotalCost => CalculateTotalCost();
+
+        //public double TotalMonthlyPayment { get { return CalculateMonthlyPayments(); } } //loan, interestRate, term
+        //public double TotalInterest { get { return CalculateTotalInterest(); } }
+        //public double TotalCost => CalculateTotalCost();
 
         //public double RemainingBalance { get { return } }
         //public double PreviousRemainingBalance = remaining balance - (total monthly payment - interest payment)
@@ -30,39 +31,39 @@
             this.Term = term;
             this.InterestRate = interestRate;
             this.Loan = loan;
-            
         }
+
         //methods
-        public double CalculateMonthlyPayments(double loan, double interestRate, int term)
+        public double CalculateMonthlyPayments() //double loan, double interestRate, int term
         {
             if (term <= 0 || interestRate < 0) return 0;
 
-            double monthlyInterestRate = interestRate / 1200;
-
-            return loan * (monthlyInterestRate / (1 - Math.Pow(1 + monthlyInterestRate, -term)));
-        }
-
-        public double CalculateTotalInterest()
-        {
-            double totalCost = TotalMonthlyPayment * Term;
-            return totalCost - Loan;
-        }
-        public double CalculateTotalCost()
-        {
-            return Term * TotalMonthlyPayment;
+            double monthlyInterestRate = InterestRate / 1200;
+            return loan * (monthlyInterestRate / (1 - Math.Pow(1 + monthlyInterestRate, -Term)));
         }
         public double CalculatePreviousRemainingBalance(int monthsPaid)
         {
             double balance = Loan;
             double monthlyInterestRate = InterestRate / 1200;
-           
+
             for (int i = 0; i < monthsPaid; i++)
             {
                 double interestPayment = balance * monthlyInterestRate;
-                double principalPayment = TotalMonthlyPayment - interestPayment;
+                double principalPayment = CalculateMonthlyPayments() - interestPayment;
                 balance -= principalPayment;
             }
             return balance;
         }
+
+        //public double CalculateTotalInterest()
+        //{
+        //    double totalCost = CalculateTotalCost();//TotalMonthlyPayment * Term;
+        //    return totalCost - Loan;
+        //}
+        //public double CalculateTotalCost()
+        //{
+        //    return Term * CalculateMonthlyPayments();
+        //}
+
     }
 }
