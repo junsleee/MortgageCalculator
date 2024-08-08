@@ -38,9 +38,6 @@ namespace MortgageCalculatorConsole
                 double remainingBalance = mortgageCalculation.CalculatePreviousRemainingBalance(i);
                 totalInterest += monthlyInterest;
 
-                //double totalInterest = mortgageCalculation.CalculateTotalInterest();
-                //double totalCost = mortgageCalculation.CalculateTotalCost();
-
                 table.AddRow(
                     i.ToString(),
                     $"[green]{monthlyPayment.ToString("C")}[/]",
