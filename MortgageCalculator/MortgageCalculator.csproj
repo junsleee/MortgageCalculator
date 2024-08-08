@@ -5,8 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Junsleee</PackageId>
+	<Version>1.0.0</Version>
+	<Author>Jun</Author>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/junsleee/MortgageCalculator.git</RepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
