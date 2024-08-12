@@ -3,9 +3,9 @@
     public class MortgageCalculation
     {
         //fields
-        private double totalMonthlyPayment;
-        private double totalInterest;
-        private double totalCost;
+        public double totalMonthlyPayment;
+        public double totalInterest;
+        public double totalCost;
 
         //properties
         public int Term { get; set; }
