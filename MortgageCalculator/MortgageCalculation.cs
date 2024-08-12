@@ -3,9 +3,6 @@
     public class MortgageCalculation
     {
         //fields
-        private int term; //months
-        private double interestRate; //interest rate in % or not
-        private double loan; //same as total principal for our purposes
         private double totalMonthlyPayment;
         private double totalInterest;
         private double totalCost;
@@ -36,10 +33,10 @@
         //methods
         public double CalculateMonthlyPayments() //double loan, double interestRate, int term
         {
-            if (term <= 0 || interestRate < 0) return 0;
+            if (Term <= 0 || InterestRate < 0) return 0;
 
             double monthlyInterestRate = InterestRate / 1200;
-            return loan * (monthlyInterestRate / (1 - Math.Pow(1 + monthlyInterestRate, -Term)));
+            return Loan * (monthlyInterestRate / (1 - Math.Pow(1 + monthlyInterestRate, -Term)));
         }
         public double CalculatePreviousRemainingBalance(int monthsPaid)
         {
