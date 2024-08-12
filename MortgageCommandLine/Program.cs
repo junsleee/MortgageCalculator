@@ -6,7 +6,7 @@ namespace MortgageCommandLine
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to my Mortgage Calculator!");
-
+            //word
             Console.Write("Enter the term of the mortgage (in months): ");
             int term = int.Parse(Console.ReadLine());
 
